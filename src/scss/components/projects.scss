@@ -1,10 +1,170 @@
-.projects__header{
-  @include diagonal($yellow);
-}
-
 .projects__list{
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 250px 250px 216px 251px 300px;
 }
 
+.projects__header{
+  box-sizing: border-box;
+  @include diagonal($yellow);
+  border: 1px solid transparent;
+  height: 500px;
+}
+
+.project__img{
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+.project__info{
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 82px;
+  margin-left: 97px;
+  color: $dark-text;
+  max-width: 155px;
+  height: 100%;
+  z-index: 20;
+
+  .project__name{
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+  }
+
+  .info__details{
+    list-style: none;
+    padding-left: 0;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+
+    .desc__bold{
+      font-weight: 700;
+    }
+
+    .desc__light{
+      font-weight: 300;
+    }
+  }
+  .project__view{
+    display: block;
+    color: $dark-text;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 12px;
+    transition-property: font-weight, color, font-size, width, position;
+    transition-duration: .2s;
+
+    &:hover{
+      color: $green;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    svg{
+      width: 19px;
+      height: 15px;
+      margin-right: 9px;
+
+      fill: $yellow;
+    }
+  }
+  .project__likes{
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 40px;
+    transform: translate(-50%);
+  }
+  .project__likes-heart{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  .project__likes-number{
+    display: block;
+    margin: 0;
+    color: red;
+  }
+}
+
+.project__item{
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.projects__list > li:nth-child(1){}
+
+.projects__list > li:nth-child(2){
+  grid-column: span 6;
+  grid-row: span 2;
+  background-image: url('../img/lamp.png');
+  .info__details{
+    margin-bottom: 60px;
+  }
+}
+
+.projects__list > li:nth-child(3){
+  grid-column: span 5;
+  grid-row: span 1;
+  background-image: url('../img/kettle.png');
+  background-color: $gray-bg;
+  min-height: 250px;
+
+  .project__info{
+    padding-top: 30px;
+    margin-left: 45px;
+    max-width: 155px;
+  }
+  .info__details{
+    margin-bottom: 15px;
+    .desc__light{
+      display: block;
+      text-transform: none;
+    }
+  }
+  .project__likes{
+    bottom: 8%;
+  }
+}
+
+.projects__list > li:nth-child(4){
+  grid-area: 2/12/4/-1;
+  background-image: url('../img/sofa.png');
+  background-position: top;
+  background-color: $beige;
+  background-blend-mode: multiply;
+  min-height: 247px;
+
+  .project__info{
+    padding-top: 295px;
+    max-width: 409px;
+    margin-left: 63px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .project__text-content{
+    max-width: 155px;
+  }
+  .project__likes{position: static; margin: 5px;}
+
+}

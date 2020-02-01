@@ -1,8 +1,10 @@
 .header{
   display: grid;
-  grid-template-columns: minmax(320px, auto) minmax(320px,465px);
+  grid-template-columns: repeat(16, 1fr);
+  min-height: 500px;
 
   .header__left{
+    grid-column: span 11;
     box-sizing: border-box;
     background-image: url('../img/2-chairs.png');
     background-position:center ;
@@ -14,6 +16,7 @@
   .header__slogan{
     span{ display: block; }
     align-self: flex-start;
+    margin-top: 0;
   }
   .logo__wrap{
     margin-top: 50px;
@@ -22,7 +25,9 @@
   }
 
   .header__right{
+    grid-column: span 5;
     @include diagonal($green);
+    min-height: 460px;
   }
   .drawer{
     display: flex;

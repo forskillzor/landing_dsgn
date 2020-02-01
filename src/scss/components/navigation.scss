@@ -1,9 +1,45 @@
 .navigation{
   list-style: none;
+  .nav__item{
+    height: 14px;
+  }
 
   .nav__link{
     font-size: 13px;
+    line-height: 10px;
     text-decoration: none;
     text-transform: uppercase;
+  }
+}
+.main-nav{
+  padding: 0;
+  position: relative;
+  margin-top: 36%;
+  margin-left: 35%;
+
+  .nav__item{
+    &:hover{
+      .menu__arrow{
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu__arrow{
+    position: absolute;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    transition-duration: 200ms;
+    transition-property: opacity;
+  }
+
+  a{
+    transition-property: color;
+    transition-duration: 200ms;
+  }
+  a:hover{
+    color: $black;
   }
 }
