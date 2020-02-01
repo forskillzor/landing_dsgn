@@ -1,0 +1,97 @@
+.header{
+  display: grid;
+  grid-template-columns: minmax(320px, auto) minmax(320px,465px);
+
+  .header__left{
+    max-width: 1035px;
+    box-sizing: border-box;
+    padding: 50px 168px;
+    background-image: url('../img/2-chairs.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $beige;
+    background-blend-mode: multiply;
+  }
+  .header__slogan{
+    span{ display: block; }
+    align-self: flex-start;
+    margin-top: 0px;
+  }
+  .logo__wrap{
+    width: 162px;
+  }
+
+  .header__right{
+    position: relative;
+    background-color: $green;
+    width: 465px;
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>');
+
+    }
+  }
+  .drawer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #e9eae2;
+    margin: 50px auto;
+
+    &:hover{ cursor: pointer; }
+
+    .sandwich{
+      position: relative;
+      width: 40px;
+      height: 3px;
+      background-color: #e9eae2;
+
+      &::before{
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: #e9eae2;
+        top: 10px;
+      }
+      &::after{
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: #e9eae2;
+        bottom: 10px;
+      }
+    }
+  }
+  .header__addres{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    span{ display: block; }
+  }
+  .header__contacts{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 136px;
+    a{
+      display: block;
+      color: $white;
+      text-decoration: $white;
+    }
+  }
+}

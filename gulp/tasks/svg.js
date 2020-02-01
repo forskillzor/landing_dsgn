@@ -2,9 +2,7 @@ module.exports = function () {
     $.gulp.task('svg', function () {
         return $.gulp.src('src/assets/img/**/*.svg')
             .pipe($.plugins.svgmin({
-                js2svg:{
-                    pretty: true
-                }
+                plugins: [ {removeViewBox: true} ]
             }))
             .pipe($.plugins.cheerio({
                 run: function ($) {

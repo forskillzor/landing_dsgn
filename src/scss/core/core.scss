@@ -6,4 +6,7 @@ html{
 }
 
 .container{
+  font-family: 'Roboto Condensed', sans-serif;
+  max-width: $container-width;
+  margin: 0 auto;
 }
