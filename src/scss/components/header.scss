@@ -5,9 +5,9 @@
   .header__left{
     max-width: 1035px;
     box-sizing: border-box;
-    padding: 50px 168px;
     background-image: url('../img/2-chairs.png');
-    background-position: center;
+    background-position:center ;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: $beige;
     background-blend-mode: multiply;
@@ -15,16 +15,16 @@
   .header__slogan{
     span{ display: block; }
     align-self: flex-start;
-    margin-top: 0px;
   }
   .logo__wrap{
+    margin-top: 50px;
+    margin-left: 168px;
     width: 162px;
   }
 
   .header__right{
     position: relative;
     background-color: $green;
-    width: 465px;
 
     &::before{
       content: "";
@@ -93,5 +93,23 @@
       color: $white;
       text-decoration: $white;
     }
+  }
+}
+
+@media (max-width: 1200px){
+  .header{
+    grid-template-columns: minmax(320px, auto) minmax(320px,465px);
+  }
+}
+
+@media (max-width: 945px){
+  .header{
+    .logo__wrap{
+      margin: 10% auto;
+    }
+  }
+  .header__left{
+    background-position: left !important;
+    background-size: cover !important;
   }
 }
