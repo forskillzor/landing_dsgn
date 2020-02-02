@@ -1,3 +1,152 @@
-.studio__head{
+.studio{
+  font-family: 'Roboto Condensed', sans-serif;
+  display: grid;
+  grid-template-columns: 465px 1fr;
+  grid-template-rows: 500px 390px;
+  background-color: $beige;
+
+  hr{
+    margin-top:0;
+  }
+}
+
+.studio__header{
   @include diagonal($orange);
+}
+
+.studio__title{
+  font-size: 48px;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+  position: relative;
+  top: 45%;
+  left: 50%;
+}
+
+.studio__info{
+  padding: 90px 160px 0 115px;
+
+  .info__left{
+    max-width: 350px;
+  }
+  .info__right{
+  }
+}
+
+.awards__title{
+  font-size:14px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.awards__text{
+  font-size: 14px;
+  max-width: 160px;
+}
+
+.info__wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.awards__wrap{
+  text-transform: uppercase;
+  display: flex;
+  max-width: 360px;
+  justify-content: space-between;
+}
+
+.info__italic{
+  font-size: 18px;
+  font-weight:400;
+  font-style: italic;
+  line-height: 18px;
+  margin-top: 0;
+}
+
+.info__light{
+  font-weight: 300;
+}
+
+.stuff{
+}
+
+.stuff__head{
+  padding: 60px 35px 0 165px;
+}
+
+.text__wrap{
+}
+
+.stuff__title{
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.stuff__text{
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.stuff__cards{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin:0;
+  padding: 60px 160px 0 0;
+}
+
+.stuff__card{
+  max-width: 270px;
+
+  .img__wrap{
+    height: 150px;
+    width: 270px;
+    background-color: $white;
+  }
+}
+
+.card__title{
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.card__text{
+  font-size: 12px;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.card__footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  .card__cv{
+    .cv{
+      color: $red-orange;
+      margin: 0;
+    }
+    svg{
+      height: 15px;
+      width: 19px;
+      transform: rotate(180deg);
+      fill: $red-orange;
+    }
+  }
+
+  .social__list{
+    margin: 0;
+    height: 15px;
+    svg{
+      height: 15px;
+      width: 20px;
+
+      fill: $red-orange;
+    }
+  }
 }
