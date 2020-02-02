@@ -1,0 +1,38 @@
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  .logo__wrap{
+    margin-top: 0;
+    margin-left: 168px;
+    width: 162px;
+  }
+  .header__slogan{
+    span{
+      display: block;
+    }
+  }
+  .footer__social{
+  }
+  .contacts{
+    background-color: $beige;
+    padding: 150px 170px 0 115px;
+
+    .header__addres{
+      font-weight: 300;
+      margin-top: 0;
+    }
+    .header__contacts{
+      font-weight: 300;
+      a{
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+  .contacts__wrap{
+    display: flex;
+    align-items: flex-start;
+  }
+}
