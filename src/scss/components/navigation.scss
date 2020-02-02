@@ -1,3 +1,9 @@
+.nav-header{
+  color: $black !important;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .navigation{
   list-style: none;
   .nav__item{
@@ -11,7 +17,7 @@
     text-transform: uppercase;
   }
 }
-.main-nav{
+.menu{
   padding: 0;
   position: relative;
   margin-top: 36%;
