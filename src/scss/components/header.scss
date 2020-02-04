@@ -1,10 +1,9 @@
 .header{
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  min-height: 500px;
+  grid-template-columns: minmax(320px, 1035px) minmax(320px, 465px);
+  //min-height: 500px;
 
   .header__left{
-    grid-column: span 11;
     box-sizing: border-box;
     background-image: url('../img/2-chairs.png');
     background-position:center ;
@@ -25,7 +24,6 @@
   }
 
   .header__right{
-    grid-column: span 5;
     @include diagonal($green);
     min-height: 460px;
   }
@@ -68,7 +66,7 @@
   .header__addres{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    //font-size: 26px;
     color: $white;
     margin-top: 90px;
     margin-bottom: 40px;
@@ -78,7 +76,7 @@
   .header__contacts{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    //font-size: 26px;
     margin-left: 136px;
     a{
       display: block;
@@ -88,13 +86,15 @@
   }
 }
 
-@media (max-width: 1200px){
+//:::::::  MEDIA :::::::::::::::::::
+
+@media screen and (max-width: 1200px){
   .header{
     grid-template-columns: minmax(320px, auto) minmax(320px,465px);
   }
 }
 
-@media (max-width: 945px){
+@media screen and (max-width: 945px){
   .header{
     .logo__wrap{
       margin: 10% auto;
@@ -107,7 +107,7 @@
   }
 }
 
-@media(max-width:650px){
+@media screen and (max-width:650px){
   .header{
     grid-template-columns: 1fr;
   }
