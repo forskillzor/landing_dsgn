@@ -1,7 +1,8 @@
 .studio{
   font-family: 'Roboto Condensed', sans-serif;
   display: grid;
-  grid-template-columns: 465px 1fr;
+  //grid-template-columns: minmax(320px, 465px) minmax(320px, 1fr);
+  grid-template-columns: minmax(320px,0.31fr) minmax(320px, 0.69fr);
   grid-template-rows: 500px 390px;
   background-color: $beige;
 
@@ -25,12 +26,18 @@
 }
 
 .studio__info{
-  padding: 90px 160px 0 115px;
+  box-sizing: border-box;
+  padding: 8% 10% 0 10%;
 
   .info__left{
-    max-width: 350px;
+    width: 47%;
+    margin-right: 8%;
   }
   .info__right{
+    width: 47%;
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -103,8 +110,12 @@
 
   .img__wrap{
     height: 150px;
-    width: 270px;
+    max-width: 270px;
     background-color: $white;
+
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -148,5 +159,34 @@
 
       fill: $red-orange;
     }
+  }
+}
+
+@media screen and (max-width: 1200px){
+
+  .studio {
+    grid-template-columns: 250px minmax(320px, 1fr);
+  }
+  .stuff__head{
+    padding: 20px;
+  }
+
+  .studio__header{
+    text-align: center;
+  }
+  .studio__title{
+    top: 70%;
+
+    left: unset;
+  }
+  .studio__info {
+    box-sizing: border-box;
+    padding: 8% 10% 0 8%;
+  }
+  .stuff__cards{
+    padding: 10% 10% 0 0;
+  }
+  .awards__text{
+    max-width:45%;
   }
 }
