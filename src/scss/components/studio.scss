@@ -76,9 +76,6 @@
   font-weight: 300;
 }
 
-.stuff{
-}
-
 .stuff__head{
   padding: 60px 35px 0 165px;
 }
@@ -102,16 +99,21 @@
   justify-content: space-between;
   list-style: none;
   margin:0;
-  padding: 60px 160px 0 0;
+  padding: 10% 10% 3% 0;
 }
 
 .stuff__card{
   max-width: 270px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 5px;
 
   .img__wrap{
     height: 150px;
     max-width: 270px;
-    background-color: $white;
+    background-color: transparent;
 
     img{
       width: 100%;
@@ -125,6 +127,7 @@
   font-weight: 700;
   margin-bottom: 2px;
 }
+
 .card__text{
   font-size: 12px;
   margin-top: 2px;
@@ -136,6 +139,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  width: 80%;
 
   .card__cv{
     .cv{
@@ -184,9 +188,14 @@
     padding: 8% 10% 0 8%;
   }
   .stuff__cards{
-    padding: 10% 10% 0 0;
+    //padding: 10% 10% 0 0;
+    padding: 10% 10% 3% 0;
+  }
+  .stuff__card{
+    padding: 5px;
   }
   .awards__text{
     max-width:45%;
   }
+
 }
