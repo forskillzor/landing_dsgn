@@ -221,12 +221,20 @@
     max-height: 200px;
   }
 
+  .stuff__head{
+    padding: 2% 10% 2% 8%;
+  }
+
   .studio__title{
     position: relative;
     top: unset;
   }
   .stuff__head{
     text-align: center;
+  }
+
+  .stuff__cards{
+    padding: 8% 10% 10% 8%;
   }
 }
 
