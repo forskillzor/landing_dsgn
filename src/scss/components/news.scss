@@ -2,7 +2,7 @@
   display: grid;
   //grid-template-columns: 465px 1fr;
   grid-template-columns: minmax(320px,0.31fr) minmax(320px, 0.69fr);
-  grid-template-rows: 500px;
+  grid-template-rows: 1fr;
   background-color: $beige;
 }
 
@@ -27,7 +27,8 @@
 }
 
 .news__item{
-  width: 49%;
+  width: 47%;
+  position: relative;
 
   a{ text-decoration: none;}
 }
@@ -67,6 +68,7 @@
 
 .news__text{
   margin-top: 20px;
+  margin-bottom: 40px;
   max-width: 364px;
   min-height: 55px;
   color: $gray-text;
@@ -76,11 +78,14 @@
 }
 
 .news__read{
-  position: relative;
+  position: absolute;
+  width: unset;
   color: $red-orange;
   text-transform: uppercase;
   text-decoration: none;
-  left: 78%;
+  left: unset;
+  right: 0;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1200px){
@@ -133,3 +138,4 @@
     max-width: 100%;
   }
 }
+

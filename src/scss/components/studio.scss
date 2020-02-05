@@ -26,7 +26,7 @@
 
 .studio__info{
   box-sizing: border-box;
-  padding: 8% 10% 0 10%;
+  padding: 8% 18% 0 10%;
 
   .info__left{
     width: 47%;
@@ -100,11 +100,10 @@
   justify-content: space-between;
   list-style: none;
   margin:0;
-  padding: 10% 10% 3% 0;
+  padding: 10% 18% 3% 0;
 }
 
 .stuff__card{
-  max-width: 270px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 5px;
@@ -112,13 +111,13 @@
   padding: 5px;
 
   .img__wrap{
-    height: 150px;
-    max-width: 270px;
     background-color: transparent;
+    overflow: hidden;
 
     img{
       width: 100%;
     }
+
   }
 }
 
@@ -266,10 +265,11 @@
 
   .stuff__card{
     max-width: 100%;
+  }
+}
 
-    .img__wrap{
-      max-width: 320px;
-      overflow: hidden;
-    }
+@media screen and (max-width: 476px){
+  .stuff__cards{
+    padding: 10% 5%;
   }
 }

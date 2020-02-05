@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: $beige;
+
   .logo__wrap{
     margin-top: 0;
     margin-left: 168px;
@@ -16,7 +18,6 @@
   .footer__social{
   }
   .contacts{
-    background-color: $beige;
     padding: 150px 170px 0 115px;
 
     .header__addres{
