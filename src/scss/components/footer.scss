@@ -5,9 +5,27 @@
   align-items: flex-start;
   background-color: $beige;
 
+  .map{
+    position: relative;
+
+    img{
+      width: 100%;
+    }
+
+    .map__pin{
+      width: 7%;
+      height: 10%;
+      position: absolute;
+      fill: $green;
+
+      top: 38%;
+      left: 37%;
+    }
+  }
+
   .logo__wrap{
     margin-top: 0;
-    margin-left: 168px;
+    margin-left: 20%;
     width: 162px;
   }
   .header__slogan{
@@ -18,7 +36,7 @@
   .footer__social{
   }
   .contacts{
-    padding: 150px 170px 0 115px;
+    padding: 8% 12% 0 8%;
 
     .header__addres{
       font-weight: 300;
@@ -37,3 +55,30 @@
     align-items: flex-start;
   }
 }
+
+@media screen and (max-width: 980px){
+
+  .footer{
+    flex-direction: column;
+    align-items: center;
+
+    //.map{
+    //
+    //  .map__pin{
+    //    top: 38%;
+    //  }
+    //
+    //}
+  }
+}
+
+//@media screen and (max-width: 620px){
+//
+//  .footer{
+//    .map{
+//      .map__pin{
+//        top: 35%;
+//      }
+//    }
+//  }
+//}
